@@ -43,6 +43,35 @@ extern "C" {
 
 /* RETRO_LANGUAGE_SPANISH */
 
+struct retro_core_option_definition option_defs_es[] = {
+   {
+      "handy_rot",
+      "Rotación de imagen",
+      "Rota la pantalla virtual de la consola para mostrar correctamente los juegos con orientación vertical en una pantalla con orientación horizontal.",
+      {
+         { "None", "Desactivada" },
+         { "270",  "Girar a la derecha" },
+         { "90",   "Girar a la izquierda" },
+         { NULL, NULL },
+      },
+      "None"
+   },
+#if defined(FRONTEND_SUPPORTS_XRGB8888)
+   {
+      "handy_gfx_colors",
+      "Profundidad de color (es necesario reiniciar)",
+      "Especifica el número de colores a mostrar en pantalla. 24 bits reduce significativamente la carga de la CPU y no está disponible en todas las plataformas.",
+      {
+         { "16bit", "Miles (16 bits)" },
+         { "24bit", "Millones (24 bits)" },
+         { NULL,    NULL },
+      },
+      "16bit"
+   },
+#endif   
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
+
 /* RETRO_LANGUAGE_GERMAN */
 
 /* RETRO_LANGUAGE_ITALIAN */
@@ -54,6 +83,36 @@ extern "C" {
 /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */
 
 /* RETRO_LANGUAGE_RUSSIAN */
+
+struct retro_core_option_definition option_defs_ru[] = {
+   {
+      "handy_rot",
+      "Поворот дисплея",
+      "Поверните изображение для правильного отображения портретно-ориентированных игр на экране с альбомной ориентацией.",
+      {
+         { "None", "Отключено" },
+         { "270",  "По часовой стрелке" },
+         { "90",   "Против часовой стрелки" },
+         { NULL, NULL },
+      },
+      "None"
+   },
+#if defined(FRONTEND_SUPPORTS_XRGB8888)
+   {
+      "handy_gfx_colors",
+      "Глубина цвета (перезапуск)",
+      "Укажите количество цветов для вывода на экран. 24-битная палитра существенно влияет на производительность и недоступна для всех платформ.",
+      {
+         { "16bit", "Тысячи (16 бит)" },
+         { "24bit", "Миллионы (24 бита)" },
+         { NULL,    NULL },
+      },
+      "16bit"
+   },
+#endif   
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
+
 
 /* RETRO_LANGUAGE_KOREAN */
 
@@ -72,6 +131,36 @@ extern "C" {
 /* RETRO_LANGUAGE_GREEK */
 
 /* RETRO_LANGUAGE_TURKISH */
+
+struct retro_core_option_definition option_defs_tr[] = {
+   {
+      "handy_rot",
+      "Ekran Döndürme",
+      "Geleneksel (yatay) bir ekranda 'portre' odaklı oyunların doğru düzenini elde etmek için sanal konsol ekranını döndürün.",
+      {
+         { "None", "devre dışı" },
+         { "270",  "Saat yönünde" },
+         { "90",   "Saat yönünün tersi" },
+         { NULL, NULL },
+      },
+      "None"
+   },
+#if defined(FRONTEND_SUPPORTS_XRGB8888)
+   {
+      "handy_gfx_colors",
+      "Renk Derinliği (Yeniden Başlat)",
+      "Ekranda görüntülenecek renk sayısını belirtin. 24 bit, genel performansı önemli ölçüde artırır ve tüm platformlarda kullanılamaz.",
+      {
+         { "16bit", "Binlerce (16 bit)" },
+         { "24bit", "Milyonlar (24 bit)" },
+         { NULL,    NULL },
+      },
+      "16bit"
+   },
+#endif   
+   { NULL, NULL, NULL, {{0}}, NULL },
+};	
+
 
 /* RETRO_LANGUAGE_SLOVAK */
 

@@ -64,7 +64,7 @@ struct retro_core_option_definition option_defs_us[] = {
 #if defined(FRONTEND_SUPPORTS_XRGB8888)
    {
       "handy_gfx_colors",
-      "Color Depth (Restart)",
+      "Color Depth (Restart Required)",
       "Specify number of colors to display on-screen. 24-bit significantly increases performance overheads and is not available on all platforms.",
       {
          { "16bit", "Thousands (16-bit)" },
@@ -77,7 +77,7 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "handy_frameskip",
       "Frameskip",
-      "Skip frames to avoid audio buffer under-run (crackling). Improves performance at the expense of visual smoothness. 'Auto' skips frames when advised by the frontend. 'Manual' utilises the 'Frameskip Threshold (%)' setting.",
+      "Skip frames to avoid audio buffer under-run (crackling). Improves performance at the expense of visual smoothness. 'Auto' skips frames when advised by the frontend. 'Manual' utilizes the 'Frameskip Threshold (%)' setting.",
       {
          { "disabled", NULL },
          { "auto",     "Auto" },
